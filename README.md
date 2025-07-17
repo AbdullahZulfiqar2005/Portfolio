@@ -56,6 +56,6 @@ I'm a passionate computer science undergraduate currently focusing on **DevOps**
 
 ```bash
 git clone https://github.com/AbdullahZulfiqar2005/Portfolio.git
-cd Portfolio
+cd Portfolio/portfolio
 npm install
 npm run dev
