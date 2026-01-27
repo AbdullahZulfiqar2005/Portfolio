@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Briefcase, Calendar, MapPin, ExternalLink, Plus, Trophy, Users, Award } from 'lucide-react'
+import { Briefcase, Calendar, MapPin, ExternalLink, GitBranch, Database, Cpu } from 'lucide-react'
 
 const Experience = () => {
   return (
@@ -17,186 +17,224 @@ const Experience = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto rounded-full mb-6"></div>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            My professional journey and work experience
+            Work, open source, and hands‑on engineering across the stack.
           </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
-          {/* Current Status */}
+        <div className="max-w-4xl mx-auto space-y-10">
+          {/* Education */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.15 }}
+            viewport={{ once: true }}
+            className="rounded-xl border border-gray-200 dark:border-dark-700 bg-white dark:bg-dark-800 p-6"
+          >
+            <div className="flex items-start justify-between gap-4 flex-wrap">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400">
+                  <Briefcase size={24} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
+                    BS Computer Science
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                    PUCIT &mdash; University of the Punjab, Lahore
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
+                <Calendar size={16} />
+                <span>Ongoing</span>
+              </div>
+            </div>
+            <ul className="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-300">
+              <li>Focused on operating systems, computer networks, databases, and information security.</li>
+              <li>Projects emphasize database design, queries, and reliable backend behaviour.</li>
+            </ul>
+          </motion.div>
+
+          {/* Freelance */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-primary-50 to-purple-50 dark:from-primary-900/20 dark:to-purple-900/20 rounded-xl p-8 mb-12 border border-primary-200 dark:border-primary-800"
+            className="rounded-xl border border-gray-200 dark:border-dark-700 bg-white dark:bg-dark-800 p-6"
           >
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-6 bg-primary-100 dark:bg-primary-900/30 rounded-full flex items-center justify-center">
-                <Briefcase size={32} className="text-primary-600 dark:text-primary-400" />
+            <div className="flex items-start justify-between gap-4 flex-wrap">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400">
+                  <Briefcase size={24} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
+                    Freelance Software Developer
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                    Security‑adjacent tooling + backend modules
+                  </p>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
-                Actively Seeking Opportunities
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-                I'm currently looking for internships, freelance projects, and entry-level positions 
-                in software development, DevOps, and system administration. I'm passionate about 
-                learning and contributing to meaningful projects.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <span className="px-4 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium">
-                  Open to Internships
-                </span>
-                <span className="px-4 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium">
-                  Freelance Projects
-                </span>
-                <span className="px-4 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium">
-                  Entry-Level Positions
-                </span>
+              <div className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
+                <Calendar size={16} />
+                <span>Present</span>
               </div>
             </div>
-          </motion.div>
 
-          {/* Hackathon Experience */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="mb-12"
-          >
-            <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-8 text-center flex items-center justify-center">
-              <Trophy size={28} className="mr-3 text-yellow-500" />
-              Hackathon Experience
-            </h3>
-            
-            <div className="grid md:grid-cols-1 gap-8">
-              {/* Organizing Hackathons */}
-              <div className="bg-white dark:bg-dark-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-dark-700">
-                <div className="flex items-center mb-4">
-                  <div className="p-3 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 mr-4">
-                    <Users size={24} />
-                  </div>
-                  <h4 className="text-xl font-semibold text-gray-800 dark:text-white">
-                    Organizing Events
-                  </h4>
+            <div className="mt-4 grid md:grid-cols-2 gap-6">
+              <div className="rounded-lg bg-gray-50 dark:bg-dark-700/60 p-4 border border-gray-200/70 dark:border-dark-600/60">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-sm font-semibold text-gray-800 dark:text-white">
+                    Android reverse engineering (authorized)
+                  </span>
                 </div>
-                <ul className="space-y-3 text-gray-600 dark:text-gray-300">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span>Organized PUCIT Hackathon 2024 with 100+ participants</span>
+                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                  <li>
+                    Decompiled an Android application to trace an integrity check triggered during app startup, and
+                    mapped the control flow to the relevant classes and methods.
                   </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span>Coordinated technical workshops and coding competitions</span>
+                  <li>
+                    Produced a test build with patched logic to disable the integrity gate for research / QA and
+                    re‑signed the APK for controlled distribution.
                   </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span>Managed event logistics and participant registration</span>
+                  <li>
+                    Implemented UI changes by editing resources (layouts, strings, drawables) without access to the
+                    original source code.
                   </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span>Led team of 15 volunteers for smooth event execution</span>
+                </ul>
+              </div>
+
+              <div className="rounded-lg bg-gray-50 dark:bg-dark-700/60 p-4 border border-gray-200/70 dark:border-dark-600/60">
+                <div className="flex items-center gap-2 mb-2">
+                  <Database size={16} className="text-primary-600 dark:text-primary-400" />
+                  <span className="text-sm font-semibold text-gray-800 dark:text-white">
+                    FBR digital invoicing module
+                  </span>
+                </div>
+                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                  <li>
+                    Designed and implemented a Python backend module to generate FBR‑compliant digital invoices,
+                    including tax calculation and validation rules.
+                  </li>
+                  <li>
+                    Integrated the module into a MySQL‑backed workflow and automated PDF invoice generation for
+                    client operations.
+                  </li>
+                  <li>
+                    Focused on correctness and maintainability: clear data models, predictable formatting, and
+                    repeatable generation.
                   </li>
                 </ul>
               </div>
             </div>
           </motion.div>
 
-          {/* What I'm Looking For */}
+          {/* Open Source & Achievements */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.25 }}
             viewport={{ once: true }}
-            className="grid md:grid-cols-2 gap-8 mb-12"
+            className="rounded-xl border border-gray-200 dark:border-dark-700 bg-white dark:bg-dark-800 p-6"
           >
-            <div className="bg-white dark:bg-dark-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-dark-700">
-              <h4 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
-                <Plus size={20} className="mr-2 text-primary-600 dark:text-primary-400" />
-                Areas of Interest
-              </h4>
-              <ul className="space-y-3 text-gray-600 dark:text-gray-300">
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Software Development (C/C++, Python, Java)</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>DevOps & Cloud Infrastructure</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>System Administration & Linux</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Web Development (Full Stack)</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Open Source Contributions</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white dark:bg-dark-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-dark-700">
-              <h4 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
-                <Calendar size={20} className="mr-2 text-primary-600 dark:text-primary-400" />
-                Availability
-              </h4>
-              <ul className="space-y-3 text-gray-600 dark:text-gray-300">
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Part-time during semester</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Full-time during breaks</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Remote work preferred</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Flexible with time zones</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Immediate start available</span>
-                </li>
-              </ul>
-            </div>
-          </motion.div>
-
-          {/* Call to Action */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Interested in working together? Let's discuss how I can contribute to your team!
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#contact"
-                className="btn-primary"
-              >
-                Get In Touch
-              </a>
+            <div className="flex items-start justify-between gap-4 flex-wrap mb-4">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400">
+                  <GitBranch size={24} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
+                    Open Source &amp; Community
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                    Real contributions to long‑lived projects.
+                  </p>
+                </div>
+              </div>
               <a
                 href="https://github.com/AbdullahZulfiqar2005"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-secondary inline-flex items-center space-x-2"
+                className="inline-flex items-center gap-2 text-sm text-primary-600 dark:text-primary-400 hover:underline"
               >
-                <ExternalLink size={20} />
-                <span>View GitHub</span>
+                <ExternalLink size={16} />
+                <span>GitHub profile</span>
               </a>
             </div>
+            <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+              <li>Active GitHub contributor with a focus on tooling, backend logic, and systems behaviour.</li>
+              <li>
+                Merged pull requests in <span className="font-medium">OWASP ZAP</span> (PRs #7013, #7058),
+                working in a large security‑focused Java codebase.
+              </li>
+              <li>
+                Contributions to <span className="font-medium">Haiku OS</span> (tickets 19898, 19914), touching a
+                real operating system stack.
+              </li>
+            </ul>
+          </motion.div>
+
+          {/* Current Focus */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.35 }}
+            viewport={{ once: true }}
+            className="rounded-xl border border-gray-200 dark:border-dark-700 bg-white dark:bg-dark-800 p-6"
+          >
+            <div className="flex items-start gap-4 mb-4">
+              <div className="p-3 rounded-lg bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400">
+                <Cpu size={24} />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
+                  Current Direction
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  Building depth in systems while staying practical about shipped software.
+                </p>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6 text-sm text-gray-600 dark:text-gray-300">
+              <div className="space-y-2">
+                <h4 className="font-semibold text-gray-800 dark:text-white">Short‑ to mid‑term</h4>
+                <ul className="space-y-1">
+                  <li>Backend engineering roles with a focus on reliability and correctness.</li>
+                  <li>Systems‑aware development on Linux, networking, and infrastructure‑heavy projects.</li>
+                  <li>Opportunities that value clear thinking over buzzwords.</li>
+                </ul>
+              </div>
+              <div className="space-y-2">
+                <h4 className="font-semibold text-gray-800 dark:text-white">Long‑term</h4>
+                <ul className="space-y-1">
+                  <li>Independent researcher‑engineer at the intersection of computing and physics.</li>
+                  <li>AI / ML work grounded in strong mathematical and systems foundations.</li>
+                  <li>Contributing to open, long‑lived infrastructure and research tools.</li>
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Location / Availability */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.45 }}
+            viewport={{ once: true }}
+            className="rounded-xl border border-gray-200 dark:border-dark-700 bg-white dark:bg-dark-800 p-6 flex flex-wrap items-center justify-between gap-4"
+          >
+            <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300">
+              <MapPin size={18} className="text-primary-600 dark:text-primary-400" />
+              <span>Lahore, Pakistan &mdash; open to remote opportunities.</span>
+            </div>
+            <a
+              href="#contact"
+              className="btn-primary text-sm"
+            >
+              Contact for software engineering roles
+            </a>
           </motion.div>
         </div>
       </div>

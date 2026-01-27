@@ -3,13 +3,13 @@ import { CheckCircle } from 'lucide-react'
 
 const About = () => {
   const highlights = [
-    "Backend development with Node.js and Python",
-    "Web development with React and Next.js",
-    "Mobile development",
-    "Linux customization and system administration",
-    "System Programming and low-level development",
-    "Freelancing preparation and client communication", 
-    "Active open source contributor"
+    'Backend engineering with Node.js and Express',
+    'Systems programming concepts in C and C++',
+    'Linux (Arch + Hyprland), tooling, and daily‑driver workflows',
+    'Database design, SQL queries, and data‑heavy applications',
+    'Networking, operating systems, and how things work under the hood',
+    'Academic exploration of AI / ML with a research‑oriented mindset',
+    'Consistent contributions to real open‑source projects'
   ]
 
   return (
@@ -37,26 +37,28 @@ const About = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">
-              Computer Science Student & Tech Enthusiast
+              Software engineer with a systems bias
             </h3>
             
             <div className="space-y-4 text-gray-600 dark:text-gray-300">
               <p>
-                I'm a passionate Computer Science student at PUCIT, currently in my 5th semester. 
-                My journey in technology started with a curiosity about how systems work, which 
-                led me to explore system programming, DevOps practices, and Linux administration.
+                I&apos;m Abdullah, a BS Computer Science student at PUCIT (University of the Punjab),
+                working across backend services, mobile, and web while keeping a strong focus on systems
+                programming and Linux. I spend a lot of time understanding how operating systems,
+                networks, and runtimes behave rather than treating them as black boxes.
+              </p>
+
+              <p>
+                I actively contribute to open source and have multiple merged contributions in projects
+                like OWASP ZAP (PRs #7013, #7058) and Haiku OS (tickets 19898, 19914). These
+                contributions keep me close to real‑world codebases and long‑lived systems.
               </p>
               
               <p>
-                I believe in the power of open source and actively contribute to projects that 
-                align with my interests. My goal is to become a Google Summer of Code contributor 
-                and work on impactful projects that solve real-world problems.
-              </p>
-              
-              <p>
-                When I'm not coding, you'll find me customizing my Linux setup, exploring new 
-                technologies, or solving algorithmic challenges on LeetCode to sharpen my 
-                problem-solving skills.
+                Long term, I want to grow into a highly independent researcher‑engineer working in
+                computational physics and systems research, while maintaining strong practical skills
+                for production engineering. I prefer depth, clarity, and designs that age well over
+                buzzwords and short‑term trends.
               </p>
             </div>
           </motion.div>
@@ -100,22 +102,22 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               viewport={{ once: true }}
-              className="grid grid-cols-2 gap-6 mt-8 pt-8 border-t border-gray-200 dark:border-dark-700"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 pt-8 border-t border-gray-200 dark:border-dark-700"
             >
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">
-                  200+
+                  Bachelors in Computer Science
                 </div>
                 <div className="text-sm text-gray-500 dark:text-gray-400">
-                  LeetCode Problems
+                  PUCIT &mdash; University of the Punjab
                 </div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">
-                  5th
+                  Open Source Contributor
                 </div>
                 <div className="text-sm text-gray-500 dark:text-gray-400">
-                  Semester
+                  OWASP ZAP • Haiku OS • CERN ROOT
                 </div>
               </div>
             </motion.div>

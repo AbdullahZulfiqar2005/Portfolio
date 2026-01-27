@@ -9,7 +9,7 @@ const Hero = () => {
   const handleDownloadResume = () => {
     // Create a link element to trigger download
     const link = document.createElement('a')
-    link.href = '/assets/abdullah-zulfiqar-resume.pdf'
+    link.href = '/assets/Abdullah-Zulfiqar-resume.pdf'
     link.download = 'Abdullah-Zulfiqar-Resume.pdf'
     link.target = '_blank'
     document.body.appendChild(link)
@@ -18,12 +18,26 @@ const Hero = () => {
   }
 
   return (
-    <section className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-primary-400 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-400 rounded-full blur-3xl"></div>
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center section-padding overflow-hidden">
+      {/* Subtle animated background */}
+      <motion.div
+        aria-hidden="true"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.4 }}
+        transition={{ duration: 1.2, ease: 'easeOut' }}
+        className="pointer-events-none absolute inset-0"
+      >
+        <motion.div
+          className="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-primary-500/20 blur-3xl"
+          animate={{ x: [0, 20, 0], y: [0, 10, 0] }}
+          transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.div
+          className="absolute -bottom-32 -right-16 w-96 h-96 rounded-full bg-purple-500/25 blur-3xl"
+          animate={{ x: [0, -15, 0], y: [0, -10, 0] }}
+          transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut' }}
+        />
+      </motion.div>
 
       <div className="container-custom text-center relative z-10">
         <motion.div
@@ -35,7 +49,7 @@ const Hero = () => {
           {/* Profile Picture */}
           <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-primary-400 to-purple-500 flex items-center justify-center text-white text-4xl font-bold shadow-2xl overflow-hidden">
             <img 
-              src="/assets/profile-photo.jpg" 
+              src="/assets/me.png" 
               alt="Abdullah Zulfiqar" 
               className="w-full h-full object-cover"
               onError={(e) => {
@@ -53,7 +67,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-7xl font-bold mb-6"
+          className="text-5xl md:text-7xl font-bold mb-6 tracking-tight"
         >
           <span className="gradient-text">Abdullah Zulfiqar</span>
         </motion.h1>
@@ -62,19 +76,18 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
+          className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4 max-w-3xl mx-auto"
         >
-          CS Student | DevOps & Linux Enthusiast | Backend Developer
+          Software Engineer
         </motion.p>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto"
+          className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed"
         >
-          Passionate about system programming, cloud technologies, and open source. 
-          Currently pursuing Computer Science at PUCIT, 5th semester.
+          I am a Software Engineer from PUCIT and an open-source enthusiast with a passion for systems programming and backend engineering. A daily Arch Linux user, I love solving problems at the kernel level as much as building scalable web and android applications.
         </motion.p>
 
         {/* Social Links */}
@@ -99,7 +112,7 @@ const Hero = () => {
             <Mail size={24} className="text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400" />
           </a>
           <a
-            href="www.linkedin.com/in/abdullah-zulfiqar-7a4240287"
+            href="https://www.linkedin.com/in/abdullah-zulfiqar-7a4240287"
             className="p-3 rounded-full bg-gray-100 dark:bg-dark-700 hover:bg-primary-100 dark:hover:bg-primary-900/20 transition-colors duration-200 group"
           >
             <Linkedin size={24} className="text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400" />

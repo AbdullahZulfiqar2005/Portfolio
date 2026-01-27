@@ -15,7 +15,7 @@
 
 @layer components {
   .section-padding {
-    @apply py-16 px-4 sm:px-6 lg:px-8;
+    @apply py-20 md:py-28 px-4 sm:px-6 lg:px-8;
   }
   
   .container-custom {
@@ -23,7 +23,7 @@
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-sky-400 via-fuchsia-400 to-violet-400 bg-clip-text text-transparent;
   }
   
   .card-hover {
@@ -31,11 +31,16 @@
   }
   
   .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200;
+    @apply text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200;
+    @apply bg-gradient-to-r from-sky-500 via-fuchsia-500 to-violet-500;
+    @apply hover:brightness-110 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0;
   }
   
   .btn-secondary {
-    @apply border border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200;
+    @apply border border-gray-300/80 dark:border-dark-600 text-gray-800 dark:text-gray-100;
+    @apply bg-white/60 dark:bg-dark-800/50 backdrop-blur-md;
+    @apply font-semibold py-3 px-6 rounded-xl transition-all duration-200;
+    @apply hover:-translate-y-0.5 hover:shadow-lg;
   }
 }
 
